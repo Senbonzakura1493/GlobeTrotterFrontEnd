@@ -1,0 +1,23 @@
+<ul>
+    <div class = "row">
+    <div *ngFor="let travel of traveling">
+            <div class="jumbotron">
+                    <h1 class="display-3"> {{travel.Destination}} </h1>
+                    <p class="lead">{{travel.Titre}}</p>
+                    <hr class="my-4">
+                    
+                    <p>{{travel.category.name}}</p>
+                    <p>{{travel.Resume}}</p>
+                    <p>{{travel.DateTime}}</p>
+                    <button class="btn btn-primary" [routerLink]="['/criticalArticle', travel.id]"> Modifier</button><p>  </p>
+                    <button class="btn btn-primary" (click)="onclick()">Supprimer</button><!-- via injection : (click)="openDialog()"-->
+                    <div *ngIf="display"><app-modal-component travelId= {{travel.id}} >
+                    </app-modal-component></div>
+                        
+                    
+                    
+                    
+                </div>                                    
+    </div>
+    </div>
+  </ul>

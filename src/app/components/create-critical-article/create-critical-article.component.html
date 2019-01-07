@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label name="titre">
+          Nom de l'article
+        </label>
+        <input type="text" id="name" class="form-control is-valid" [(ngModel)]="travel.Titre" name="Titre" >
+        <label name="dateTime">
+          Date
+        </label>
+        <input type="text" id="dateTime" class="form-control is-valid" [(ngModel)]="travel.DateTime" name="DateTime" >
+        <label name="destination">
+          Destination
+        </label>
+        <input type="text" id="destination" class="form-control is-valid" [(ngModel)]="travel.Destination" name="Destination" >
+        <label name="category">
+          Category
+        </label>
+        <select class="form-control" id="exampleSelect1" [(ngModel)]="travel.category" name="category">
+            <option *ngFor="let category of categories" [ngValue]="category.name">{{ category.name }}</option>
+        </select>
+        <label name="placeToVisit">
+          Lieu(x) à visiter
+        </label>
+        <input type="text" id="placeToVisit" class="form-control is-valid" [(ngModel)]="travel.PlaceToVisit" name="PlaceToVisit" >
+        <label name="resume">
+          Votre critique
+        </label>
+        <input type="text" id="resume" class="form-control is-valid" [(ngModel)]="travel.Resume" name="Resume" >
+      </div>
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+  </div>
+</div>

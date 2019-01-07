@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label name="name">
+          Nom de la catégorie
+        </label>
+        <input type="text" id="name" class="form-control is-valid" [(ngModel)]="category.name" name="name" >
+      </div>
+      <button class="btn btn-primary">Modifier</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<ul>
+    <div class = "row">
+    <div *ngFor="let cat of categories">
+        <div class="jumbotron">
+            <h1 class="display-3"> {{cat.name}} </h1>
+            <hr class="my-4">
+            <button class="btn btn-primary" [routerLink]="['/category', cat.id]"> Modifier</button> 
+        </div>
+
+    </div>
+    </div>
+  </ul>
