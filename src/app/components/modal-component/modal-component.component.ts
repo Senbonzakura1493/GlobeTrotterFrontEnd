@@ -40,8 +40,8 @@ export class ModalComponentComponent implements OnInit {
    this.modalComponentService.deleteTravel(this.travelId).subscribe(
     (data) =>{
       if (data.valid == true) {
-        console.log(data.valid)
-        this.router.navigate(['/']);
+        window.location.reload();
+        
       }
     }
   );  

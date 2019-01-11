@@ -13,7 +13,7 @@ const routes: Routes = [
 
 { path: '', redirectTo: '/criticalArticles', pathMatch: 'full' },
 
-{ path: 'categories', component: DisplayCategoriesComponent }, // sur le path categories=> affichage des categories
+{ path: 'categories', component: DisplayCategoriesComponent }, 
 
 { path: 'category/:id', component: ModifyCategoryComponent },
 
@@ -25,7 +25,7 @@ const routes: Routes = [
 
 { path: 'newCriticalArticle', component: CreateCriticalArticleComponent },
 
-{ path: 'deleteCriticalComponent', component: ModalComponentComponent },
+{ path: 'deleteComponent/:id', component: ModalComponentComponent },
 
 ];
 

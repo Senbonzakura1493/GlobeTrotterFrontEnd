@@ -1,4 +1,5 @@
-<ul>
+<img src ="https://www.rsatravelinsurance.com/sites/rsatravelinsurance.com/files/cuba.jpg" width =1550px height=500px/>
+
     <div class = "row">
     <div *ngFor="let travel of traveling">
             <div class="jumbotron">
@@ -12,12 +13,9 @@
                     <button class="btn btn-primary" [routerLink]="['/criticalArticle', travel.id]"> Modifier</button><p>  </p>
                     <button class="btn btn-primary" (click)="onclick()">Supprimer</button><!-- via injection : (click)="openDialog()"-->
                     <div *ngIf="display"><app-modal-component travelId= {{travel.id}} >
-                    </app-modal-component></div>
-                        
+                    </app-modal-component></div>                    
                     
-                    
-                    
-                </div>                                    
+              </div>                                    
     </div>
     </div>
-  </ul>
+  
